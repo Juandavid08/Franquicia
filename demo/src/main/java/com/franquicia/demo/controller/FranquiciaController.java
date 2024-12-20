@@ -67,7 +67,7 @@ public class FranquiciaController {
         return ResponseEntity.ok(productosConMasStock);
     }
 
-    // actualiza el nombre de una franquicia (punto extra)
+    // actualiza el nombre de una franquicia
     @PutMapping("/{idFranquicia}")
     public ResponseEntity<Franquicia> actualizarNombreFranquicia(
             @PathVariable String idFranquicia,
@@ -76,7 +76,7 @@ public class FranquiciaController {
         return ResponseEntity.ok(franquiciaService.actualizarNombreFranquicia(idFranquicia, nuevoNombre));
     }
 
-    // actualiza el nombre de una sucursal (punto extra)
+    // actualiza el nombre de una sucursal
     @PutMapping("/{idFranquicia}/sucursales/{idSucursal}")
     public ResponseEntity<Franquicia> actualizarNombreSucursal(
             @PathVariable String idFranquicia,
@@ -87,7 +87,7 @@ public class FranquiciaController {
                 .ok(franquiciaService.actualizarNombreSucursal(idFranquicia, idSucursal, nuevoNombreSucursal));
     }
 
-    // actualiza el nombre de un producto (punto extra)
+    // actualiza el nombre de un producto
     @PutMapping("/{idFranquicia}/sucursales/{idSucursal}/productos/{idProducto}")
     public ResponseEntity<Franquicia> actualizarNombreProducto(
             @PathVariable String idFranquicia,
