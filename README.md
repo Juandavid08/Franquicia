@@ -32,7 +32,7 @@ mvn spring-boot:run
 Con estos comando se ejecutará localmente desde el puerto 8080.
 
 
-# NOTA: He dejado una coleccion de Endpoints que seran util para saber como utilizar cada uno, se puede importar en Postman o en Bruno.
+# NOTA: He dejado una coleccion de Endpoints llamado "Franquicia.coleccion" que seran util para saber como utilizar cada uno, se puede importar en Postman o en Bruno. recomiendo utilizar variables de entorno para asignar a los ID
 
 # ejemplo de como se almacena en mongoDB
 ![image](https://github.com/user-attachments/assets/1590b9f7-f867-4e5d-8390-e72ca50d232a)

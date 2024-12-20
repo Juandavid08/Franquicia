@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "657c630e-cbb3-4b1b-a38f-460f893b408a",
+		"name": "Franquicia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23965304"
+	},
+	"item": [
+		{
+			"name": "Vincular Sucursal a franquicia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Sucursal Herramientas\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/sucursales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"sucursales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vincular producto a Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Teclado\",\r\n  \"descripcion\": \"Teclado Oficina\",\r\n  \"precio\": 100000,\r\n  \"stock\": 1500\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/sucursales/{idSucursal}/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"sucursales",
+						"{idSucursal}",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un producto de sucursal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/sucursales/{idSucursal}/productos/{idProducto}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"sucursales",
+						"{idSucursal}",
+						"productos",
+						"{idProducto}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear franquicia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Juan David S.A.S\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar el stock de un producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stock\":  23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/sucursales/{idSucursal}/productos/{idProducto}/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"sucursales",
+						"{idSucursal}",
+						"productos",
+						"{idProducto}",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar los productos de cada sucursal con mayor stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/productos/max-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"productos",
+						"max-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el nombre de una franquicia",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nuevoNombre\": \"Renteria Valencia S.A.S\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el nombre de una sucursal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nuevoNombre\": \"Sucursal Videos\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/sucursales/{idSucursal}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"sucursales",
+						"{idSucursal}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el nombre de un producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nuevoNombre\": \"Mouse\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicias/{idFranquicia}/sucursales/{idSucursal}/productos/{idProducto}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicias",
+						"{idFranquicia}",
+						"sucursales",
+						"{idSucursal}",
+						"productos",
+						"{idProducto}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
